@@ -15,10 +15,10 @@
 <text x="728" y="108" font-size="38" fill="#e7e7e0">00</text>
 <text x="728" y="134" font-size="11" fill="#a5a8a0">STARS EARNED</text>
 <text x="32" y="181" font-size="11" fill="#a4b8ff">LANGUAGES / SOURCE BYTES</text>
-<text x="32" y="211" font-size="11" fill="#e7e7e0">Python          [######....] 58.4%</text>
-<text x="338" y="211" font-size="11" fill="#e7e7e0">C#              [#.........] 14.3%</text>
+<text x="32" y="211" font-size="11" fill="#e7e7e0">Python          [######....] 58.5%</text>
+<text x="338" y="211" font-size="11" fill="#e7e7e0">C#              [#.........] 14.2%</text>
 <text x="644" y="211" font-size="11" fill="#e7e7e0">TypeScript      [#.........]  9.4%</text>
-<text x="32" y="243" font-size="11" fill="#e7e7e0">JavaScript      [#.........]  7.6%</text>
+<text x="32" y="243" font-size="11" fill="#e7e7e0">JavaScript      [#.........]  7.5%</text>
 <text x="338" y="243" font-size="11" fill="#e7e7e0">C               [#.........]  2.9%</text>
 <text x="644" y="243" font-size="11" fill="#e7e7e0">CSS             [#.........]  2.0%</text>
 <text x="32" y="281" font-size="9" fill="#a5a8a0">PUBLIC DATA ONLY / FORKS + ARCHIVES EXCLUDED FROM LANGUAGE TOTALS</text>
