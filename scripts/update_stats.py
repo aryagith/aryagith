@@ -29,7 +29,7 @@ def render(repos, languages, prs, date, portrait, colors=None):
     stars = sum(repo["stargazers_count"] for repo in repos if not repo["fork"])
     info = [
         "arya gosavi", "aryagith@github", "------------------------------------------", "",
-        "School ....... York University", "Location ..... Toronto, CA",
+        "Location ..... Toronto, CA",
         "Focus ........ AI / full-stack / systems", "",
         "Languages .... Python, CUDA, C#",
         "               TypeScript, JavaScript", "",
@@ -47,15 +47,17 @@ def render(repos, languages, prs, date, portrait, colors=None):
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="960" height="{height}" viewBox="0 0 960 {height}" role="img" aria-labelledby="title desc">',
              '<title id="title">Arya Gosavi — ASCII profile</title>',
              '<desc id="desc">Colored ASCII silhouette with hoodie and camera, beside a short bio and public GitHub stats.</desc>',
-             f'<rect width="960" height="{height}" rx="8" fill="#e6e6e6"/>',
+             f'<rect width="960" height="{height}" rx="8" fill="#353535"/>',
              '<g font-family="Consolas,monospace" font-size="12" xml:space="preserve">']
     for y, row in enumerate(portrait):
         for x, char in enumerate(row):
             if char != ' ':
-                color = colors[y][x] if colors else "#303030"
+                color = colors[y][x] if colors else "#e7e7e0"
+                if colors:
+                    color = '#' + ''.join(f'{round(int(color[i:i+2], 16) * 0.45 + 140):02x}' for i in (1, 3, 5))
                 parts.append(f'<text x="{32 + x * 7.2:.1f}" y="{46 + y * 17.4:.1f}" fill="{color}">{escape(char)}</text>')
     for y, row in enumerate(info):
-        parts.append(f'<text x="520" y="{46 + y * 17.4:.1f}" fill="#242424">{escape(row)}</text>')
+        parts.append(f'<text x="520" y="{46 + y * 17.4:.1f}" fill="#e7e7e0">{escape(row)}</text>')
     parts.extend(["</g>", "</svg>"])
     return "\n".join(parts) + "\n"
 
@@ -74,7 +76,7 @@ def check():
     assert "75.0%" in profile and "25.0%" in profile and "Stars ........ 3" in profile
     assert "Public repos . 2" in profile and "Original ..... 1 active" in profile
     ET.fromstring(profile)
-    assert 'fill="#e6e6e6"' in profile
+    assert 'fill="#353535"' in profile and 'York University' not in profile
     readme = f"intro\n{START}\nold\n{END}\nprojects\n"
     updated = replace_profile(readme, "![ASCII profile](assets/profile.svg)")
     assert updated.startswith("intro\n") and updated.endswith("\nprojects\n") and "old" not in updated
