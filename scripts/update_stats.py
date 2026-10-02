@@ -24,7 +24,7 @@ def api(path):
         return json.load(response)
 
 
-def render(repos, languages, prs, date, portrait, colors=None):
+def render(repos, languages, prs, date, portrait):
     original = [repo for repo in repos if not repo["fork"] and not repo["archived"]]
     stars = sum(repo["stargazers_count"] for repo in repos if not repo["fork"])
     info = [
@@ -46,15 +46,14 @@ def render(repos, languages, prs, date, portrait, colors=None):
     height = round(max(len(portrait), len(info)) * 17.4 + 64)
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="960" height="{height}" viewBox="0 0 960 {height}" role="img" aria-labelledby="title desc">',
              '<title id="title">Arya Gosavi — ASCII profile</title>',
-             '<desc id="desc">Colored ASCII silhouette with hoodie and camera, beside a short bio and public GitHub stats.</desc>',
+             '<desc id="desc">Monochrome ASCII silhouette with a subtle blue outline, hoodie and camera, beside a short bio and public GitHub stats.</desc>',
              f'<rect width="960" height="{height}" rx="8" fill="#353535"/>',
              '<g font-family="Consolas,monospace" font-size="12" xml:space="preserve">']
     for y, row in enumerate(portrait):
         for x, char in enumerate(row):
             if char != ' ':
-                color = colors[y][x] if colors else "#e7e7e0"
-                if colors:
-                    color = '#' + ''.join(f'{round(int(color[i:i+2], 16) * 0.45 + 140):02x}' for i in (1, 3, 5))
+                edge = any(ny < 0 or ny >= len(portrait) or nx < 0 or nx >= len(portrait[ny]) or portrait[ny][nx] == ' ' for nx, ny in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)))
+                color = "#b5c4d8" if edge else "#d1d1d1"
                 parts.append(f'<text x="{32 + x * 7.2:.1f}" y="{46 + y * 17.4:.1f}" fill="{color}">{escape(char)}</text>')
     for y, row in enumerate(info):
         parts.append(f'<text x="520" y="{46 + y * 17.4:.1f}" fill="#e7e7e0">{escape(row)}</text>')
@@ -77,6 +76,8 @@ def check():
     assert "Public repos . 2" in profile and "Original ..... 1 active" in profile
     ET.fromstring(profile)
     assert 'fill="#353535"' in profile and 'York University' not in profile
+    outlined = render([], Counter(), 0, "test", ["###", "###", "###"])
+    assert outlined.count('fill="#b5c4d8"') == 8 and outlined.count('fill="#d1d1d1"') == 1
     readme = f"intro\n{START}\nold\n{END}\nprojects\n"
     updated = replace_profile(readme, "![ASCII profile](assets/profile.svg)")
     assert updated.startswith("intro\n") and updated.endswith("\nprojects\n") and "old" not in updated
@@ -108,10 +109,7 @@ def main():
     if prs.get("incomplete_results"):
         raise RuntimeError("Incomplete pull request totals; keeping the previous stats.")
     portrait = (ROOT / "assets/portrait.txt").read_text(encoding="utf-8").splitlines()
-    colors = json.loads((ROOT / "assets/portrait-colors.json").read_text(encoding="utf-8"))
-    if len(colors) != len(portrait) or any(len(c) != len(p) for c, p in zip(colors, portrait)):
-        raise ValueError("Portrait colors must match the ASCII text dimensions.")
-    profile = render(repos, languages, prs["total_count"], datetime.now(timezone.utc).date().isoformat(), portrait, colors)
+    profile = render(repos, languages, prs["total_count"], datetime.now(timezone.utc).date().isoformat(), portrait)
     ET.fromstring(profile)
     output = ROOT / "assets/profile.svg"
     temporary = output.with_suffix(".tmp")

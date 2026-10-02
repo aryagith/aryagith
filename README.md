@@ -1,5 +1,5 @@
 <!-- PROFILE:START -->
-[![Arya Gosavi — colored ASCII profile](assets/profile.svg)](https://aryas-portfolio.vercel.app)
+[![Arya Gosavi — ASCII profile](assets/profile.svg)](https://aryas-portfolio.vercel.app)
 <!-- PROFILE:END -->
 
 [portfolio](https://aryas-portfolio.vercel.app) · [linkedin](https://www.linkedin.com/in/arya-gosavi-42063421b/) · [repositories](https://github.com/aryagith?tab=repositories)

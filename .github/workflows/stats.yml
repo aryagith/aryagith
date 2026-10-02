@@ -9,7 +9,6 @@ on:
     paths:
       - scripts/update_stats.py
       - assets/portrait.txt
-      - assets/portrait-colors.json
       - .github/workflows/stats.yml
 
 permissions:
