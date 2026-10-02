@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="621" viewBox="0 0 960 621" role="img" aria-labelledby="title desc">
 <title id="title">Arya Gosavi — ASCII profile</title>
 <desc id="desc">Monochrome ASCII silhouette with a subtle blue outline, hoodie and camera, beside a short bio and public GitHub stats.</desc>
-<rect width="960" height="621" rx="8" fill="#353535" />
+<rect width="960" height="621" rx="8" fill="#353535"/>
 <g font-family="Consolas,monospace" font-size="12" xml:space="preserve">
 <text x="161.6" y="46.0" fill="#b5c4d8">+</text>
 <text x="168.8" y="46.0" fill="#b5c4d8">*</text>
@@ -1206,20 +1206,20 @@
 <text x="520" y="46.0" fill="#e7e7e0">arya gosavi</text>
 <text x="520" y="63.4" fill="#e7e7e0">aryagith@github</text>
 <text x="520" y="80.8" fill="#e7e7e0">------------------------------------------</text>
-<text x="520" y="98.2" fill="#e7e7e0" />
+<text x="520" y="98.2" fill="#e7e7e0"></text>
 <text x="520" y="115.6" fill="#e7e7e0">Location ..... Toronto, CA</text>
 <text x="520" y="133.0" fill="#e7e7e0">Focus ........ AI / full-stack / systems</text>
-<text x="520" y="150.4" fill="#e7e7e0" />
+<text x="520" y="150.4" fill="#e7e7e0"></text>
 <text x="520" y="167.8" fill="#e7e7e0">Languages .... Python, CUDA, C#</text>
 <text x="520" y="185.2" fill="#e7e7e0">               TypeScript, JavaScript</text>
-<text x="520" y="202.6" fill="#e7e7e0" />
+<text x="520" y="202.6" fill="#e7e7e0"></text>
 <text x="520" y="220.0" fill="#e7e7e0">-- GitHub --------------------------------</text>
-<text x="520" y="237.4" fill="#e7e7e0" />
+<text x="520" y="237.4" fill="#e7e7e0"></text>
 <text x="520" y="254.8" fill="#e7e7e0">Public repos . 16</text>
 <text x="520" y="272.2" fill="#e7e7e0">Original ..... 13 active repositories</text>
 <text x="520" y="289.6" fill="#e7e7e0">Pull requests  3 public</text>
 <text x="520" y="307.0" fill="#e7e7e0">Stars ........ 0</text>
-<text x="520" y="324.4" fill="#e7e7e0" />
+<text x="520" y="324.4" fill="#e7e7e0"></text>
 <text x="520" y="341.8" fill="#e7e7e0">-- Source bytes --------------------------</text>
 <text x="520" y="359.2" fill="#e7e7e0">Python                    58.6%</text>
 <text x="520" y="376.6" fill="#e7e7e0">C#                        14.2%</text>
@@ -1227,7 +1227,7 @@
 <text x="520" y="411.4" fill="#e7e7e0">JavaScript                 7.5%</text>
 <text x="520" y="428.8" fill="#e7e7e0">C                          2.9%</text>
 <text x="520" y="446.2" fill="#e7e7e0">CSS                        2.0%</text>
-<text x="520" y="463.6" fill="#e7e7e0" />
+<text x="520" y="463.6" fill="#e7e7e0"></text>
 <text x="520" y="481.0" fill="#e7e7e0">Updated ...... 2026-10-02</text>
 </g>
 </svg>
