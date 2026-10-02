@@ -2,8 +2,8 @@
 <title id="title">Arya Gosavi | Software, AI, hardware</title>
 <desc id="desc">ASCII portrait converted from Arya's GitHub avatar, with an ASCII nameplate. Software engineering at York University, Toronto.</desc>
 <rect width="960" height="500" rx="12" fill="#08090a"/>
-<text x="32" y="26" fill="#a4b8ff" font-family="Consolas,monospace" font-size="12" dominant-baseline="text-before-edge" xml:space="preserve">ARYAGITH / PERSONAL ARCHIVE</text>
-<text x="716" y="26" fill="#a5a8a0" font-family="Consolas,monospace" font-size="12" dominant-baseline="text-before-edge" xml:space="preserve">TORONTO, CA   [ONLINE]</text>
+<text x="32" y="26" fill="#a4b8ff" font-family="Consolas,monospace" font-size="12" dominant-baseline="text-before-edge" xml:space="preserve">ARYAGITH</text>
+<text x="838" y="26" fill="#a5a8a0" font-family="Consolas,monospace" font-size="12" dominant-baseline="text-before-edge" xml:space="preserve">TORONTO, CA</text>
 <path d="M32 56H928" stroke="#3a3d39"/>
 <text x="32" y="83.0" fill="#e7e7e0" font-family="Consolas,monospace" font-size="9" dominant-baseline="text-before-edge" xml:space="preserve">AAAAAAAAA2255522222555333hhMMMHHHHHHHHGHHHHHHHHHHHGGGGGGGHHHHHGGGGGGHHHH</text>
 <text x="32" y="90.4" fill="#e7e7e0" font-family="Consolas,monospace" font-size="9" dominant-baseline="text-before-edge" xml:space="preserve">AAAAAAAA222552222555333hhhMMMMMHHHHHHHGHHHHHGGGGGGGGGGGGGGGGGGGGGHHHHHHH</text>
@@ -56,7 +56,6 @@
 <text x="32" y="438.20000000000005" fill="#e7e7e0" font-family="Consolas,monospace" font-size="9" dominant-baseline="text-before-edge" xml:space="preserve">iirssrir;ii;;;;:;i;;;;;is;;;;iXXXXs.;r..,,,rAAAs:;X,..:,:i;:;:ii;;:i;;i;</text>
 <text x="32" y="445.6" fill="#e7e7e0" font-family="Consolas,monospace" font-size="9" dominant-baseline="text-before-edge" xml:space="preserve">sri;i;;;;i::;::;irr;isriiirii:sAXAA. ;,,...:22Ai:s.,..:,,:;;:,:;::::::;;</text>
 <path d="M448 84V444" stroke="#3a3d39"/>
-<text x="480" y="86" fill="#a4b8ff" font-family="Consolas,monospace" font-size="12" dominant-baseline="text-before-edge" xml:space="preserve">[01] / HELLO, WORLD</text>
 <text x="480" y="130" fill="#e7e7e0" font-family="Consolas,monospace" font-size="17" dominant-baseline="text-before-edge" xml:space="preserve">  #    ####   #   #    #  </text>
 <text x="480" y="141" fill="#e7e7e0" font-family="Consolas,monospace" font-size="17" dominant-baseline="text-before-edge" xml:space="preserve"> # #   #   #  #   #   # # </text>
 <text x="480" y="152" fill="#e7e7e0" font-family="Consolas,monospace" font-size="17" dominant-baseline="text-before-edge" xml:space="preserve">#   #  #   #   # #   #   #</text>
@@ -71,11 +70,7 @@
 <text x="480" y="274" fill="#e7e7e0" font-family="Consolas,monospace" font-size="17" dominant-baseline="text-before-edge" xml:space="preserve">#   #  #   #      #  #   #  #   #    #  </text>
 <text x="480" y="285" fill="#e7e7e0" font-family="Consolas,monospace" font-size="17" dominant-baseline="text-before-edge" xml:space="preserve">#   #  #   #      #  #   #   # #     #  </text>
 <text x="480" y="296" fill="#e7e7e0" font-family="Consolas,monospace" font-size="17" dominant-baseline="text-before-edge" xml:space="preserve"> ####   ###   ####   #   #    #    #####</text>
-<text x="480" y="339" fill="#a4b8ff" font-family="Consolas,monospace" font-size="15" dominant-baseline="text-before-edge" xml:space="preserve">&gt; SOFTWARE / AI / HARDWARE</text>
+<text x="480" y="339" fill="#a4b8ff" font-family="Consolas,monospace" font-size="15" dominant-baseline="text-before-edge" xml:space="preserve">SOFTWARE / AI / HARDWARE</text>
 <text x="480" y="373" fill="#a5a8a0" font-family="Consolas,monospace" font-size="12" dominant-baseline="text-before-edge" xml:space="preserve">York University / Software Engineering</text>
-<text x="480" y="397" fill="#a5a8a0" font-family="Consolas,monospace" font-size="12" dominant-baseline="text-before-edge" xml:space="preserve">Building where code meets the real world.</text>
-<text x="480" y="435" fill="#a4b8ff" font-family="Consolas,monospace" font-size="12" dominant-baseline="text-before-edge" xml:space="preserve">[ explore the repositories below ]</text>
 <path d="M32 469H928" stroke="#3a3d39"/>
-<text x="32" y="481" fill="#a5a8a0" font-family="Consolas,monospace" font-size="9" dominant-baseline="text-before-edge" xml:space="preserve">SOURCE: GITHUB AVATAR -&gt; ASCII</text>
-<text x="736" y="481" fill="#a5a8a0" font-family="Consolas,monospace" font-size="9" dominant-baseline="text-before-edge" xml:space="preserve">LESS NOISE. MORE SIGNAL.</text>
 </svg>

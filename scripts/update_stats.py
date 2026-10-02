@@ -27,7 +27,7 @@ def render(repos, languages, prs, date):
     total = sum(languages.values())
     parts = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">',
-        '<title id="title">Public GitHub signals</title>',
+        '<title id="title">Public GitHub stats</title>',
         '<desc id="desc">Public repository and pull request counts, stars, and languages by source bytes. Forks and archived repositories are excluded from language totals.</desc>',
         '<rect width="960" height="300" rx="12" fill="#08090a"/>',
         '<g font-family="Consolas,monospace" xml:space="preserve">',
@@ -36,8 +36,8 @@ def render(repos, languages, prs, date):
     def text(x, y, value, size=12, color="#e7e7e0"):
         parts.append(f'<text x="{x}" y="{y}" font-size="{size}" fill="{color}">{escape(str(value))}</text>')
 
-    text(32, 32, "ARYAGITH / PUBLIC SIGNALS", color="#a4b8ff")
-    text(730, 32, f"SYNC / {date}", color="#a5a8a0")
+    text(32, 32, "GITHUB STATS", color="#a4b8ff")
+    text(730, 32, f"UPDATED / {date}", color="#a5a8a0")
     parts.append('<path d="M32 52H928 M32 154H928" stroke="#3a3d39"/>')
     original = [repo for repo in repos if not repo["fork"] and not repo["archived"]]
     metrics = [(len(repos), "PUBLIC REPOS"), (len(original), "ORIGINAL / ACTIVE"), (prs, "PUBLIC PULL REQUESTS"), (sum(repo["stargazers_count"] for repo in repos if not repo["fork"]), "STARS EARNED")]

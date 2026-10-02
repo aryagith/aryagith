@@ -6,13 +6,9 @@
   <a href="https://github.com/aryagith?tab=repositories"><code>[ all repositories ]</code></a>
 </p>
 
-```text
-$ whoami
-arya gosavi / software engineering @ york university
-toronto, ca / ai + full-stack + systems that touch the real world
-```
+Software Engineering at York University. Based in Toronto.
 
-### `01 / selected work`
+### `projects`
 
 **GPU / AI / computer vision**
 
@@ -37,28 +33,22 @@ toronto, ca / ai + full-stack + systems that touch the real world
 | [**captioner**](https://github.com/aryagith/captions-generator-webapp) | Video upload, transcription, editable captions, and subtitle export. | `Next.js` `AWS` `FFmpeg` |
 | [**visuomotor lab**](https://github.com/aryagith/visuomotor-adaptation-lab) | Webcam body tracking and Unity experiments with altered visual feedback. | `Unity` `C#` `MediaPipe` |
 
-### `02 / the lab`
+### `experiments`
 
 ```text
 experiments/
 |-- bytebattle          live data + LLM headlines for a smart mirror
 |-- ecommerce-chatbot   comparing text representations for intent classification
-`-- neetcode            algorithms, one problem at a time
+`-- neetcode            algorithm practice
 ```
 
 [bytebattle](https://github.com/aryagith/bytebattle) · [ecommerce-chatbot](https://github.com/aryagith/ecommerce-chatbot) · [neetcode-submissions](https://github.com/aryagith/neetcode-submissions)
 
-### `03 / public signals`
+### `stats`
 
 [![Public GitHub stats and repository language breakdown](assets/stats.svg)](https://github.com/aryagith?tab=repositories)
 
 <sub>Updated daily from GitHub's API. Languages are measured by source bytes across public, original, active repositories.</sub>
-
----
-
-```text
-$ echo "build it. measure it. make it better."
-```
 
 <details>
 <summary><code>[ view the raw ASCII portrait ]</code></summary>
