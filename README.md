@@ -1,41 +1,8 @@
 <!-- PROFILE:START -->
-```text
-                  +*##+=                                          arya gosavi
-              *###%%%%%%##*+                                      aryagith@github
-            *%@@@@%#%%%%%%%%%*                                    ------------------------------------------
-           *#@@@@@@%%%%%@%@%%%#
-           **#%%%%%%%@@@@@@@@@%                                   School ....... York University
-           =*#*****+*%%%@%%@@%#                                   Location ..... Toronto, CA
-            -**=+*+-+#+-===+#**                                   Focus ........ AI / full-stack / systems
-             --...::+#*=--==*##@@%#+-
-             -==..:-=+*+-=+*%@@@@##%%=--                          Languages .... Python, CUDA, C#
-             #@@*-:---==+*#%@@@@#*#@%#*+++                                       TypeScript, JavaScript
-            =@%%%#*=:-=*%%@@@%%*+#@%#*****#
-           -=#%#***#*==-+##****#%@%##***#***#                     -- GitHub --------------------------------
-          ++%@@@%##%%##*==+**#%@@###**#%****##
-          =%#%@@@%%#@@%#+*#%%###%######%*#####%                   Public repos . 16
-          +#%%@@@@%*#@@%#%%#%***#@@%###%#**###@@                  Original ..... 13 active repositories
-          **%@%%%@%*#*%@@%%#*+=+*%+=*##%**####%**                 Pull requests  3 public
-         *%##%%##%#*@%**%@###--+#%-.:+%%**####*#%@@               Stars ........ 0
-         *@%%#####%%%@@%+=+**+=****=..+@#**##%%%@@@@
-         =#%%%%#####%#%@@#+=++*****#**##%#+*##@@@@@@@@            -- Source bytes --------------------------
-         -+**#%%#####%###@@%+=***#######*###*##%@@@@@@@@          Python                    58.5%
-         -*##%%%@%%@%+*####%%#+*+**#####*#%*++*#%@@@@@@@@         C#                        14.2%
-         *@@@@%%%#%@@==********###***#####*++#%@@@@@@@@@%         TypeScript                 9.4%
-          @@%*****#%@@@@@%%##*#%%%%%%#*=+*#%@@@@@@@@@@@@          JavaScript                 7.5%
-         +%%**++**#@@@%##%@@@#*@@@@%****#%@@@@@@@@@@%##*          C                          2.9%
-      #####*#*:-##++=-+++#@@@%%@@@%#***%%#%%@@@@@@%#####***       CSS                        2.0%
-    ##%%@@%#%=::=+=**=-%@@@@@%*+**+++##%@%####%@**%########**
-  **#%%@@@@%=:+=*=+%%+:%@%#**=-=*#%%#@@%@%**#@@=:*@%%%%##%##%%    Updated ...... 2026-10-02
-  *#%@@@@@@@=.-*#*=---**-==+=:+#%@%%#**##+==+*%=-#%%%%%@@@%%##
-   %@@@@@@@@@#+=:-++###*#+=-:-#@@@#%=+**###%@%+++@@@@@@@@@%%#
-     %%%%@@@@@@@*+=-=***=:-=*@@@@@#%*%%%%%%##%@+-=#@@@@@%%%
-            #%%%%%%#*+==+#%@%###*%%*#@%%%%#*++%%+=%@@%%%#%
-                    ########  +++*@%#@%@@@#+++###%@%%%%%
-```
+[![Arya Gosavi — colored ASCII profile](assets/profile.svg)](https://aryas-portfolio.vercel.app)
 <!-- PROFILE:END -->
 
-[portfolio](https://aryas-portfolio.vercel.app) · [linkedin](https://www.linkedin.com/in/arya-gosavi-42063421b/) · [repositories](https://github.com/aryagith?tab=repositories)
+[portfolio](https://aryas-portfolio.vercel.app) Â· [linkedin](https://www.linkedin.com/in/arya-gosavi-42063421b/) Â· [repositories](https://github.com/aryagith?tab=repositories)
 
 ### `projects`
 
@@ -58,7 +25,7 @@
 
 | Project | What it does | Stack |
 | :--- | :--- | :--- |
-| [**quizzle**](https://github.com/aryagith/quizzle) | AI-generated quizzes with saved games and performance history. [Open app ↗](https://quizzle-seven.vercel.app) | `Next.js` `TypeScript` `Prisma` |
+| [**quizzle**](https://github.com/aryagith/quizzle) | AI-generated quizzes with saved games and performance history. [Open app â†—](https://quizzle-seven.vercel.app) | `Next.js` `TypeScript` `Prisma` |
 | [**captioner**](https://github.com/aryagith/captions-generator-webapp) | Video upload, transcription, editable captions, and subtitle export. | `Next.js` `AWS` `FFmpeg` |
 | [**visuomotor lab**](https://github.com/aryagith/visuomotor-adaptation-lab) | Webcam body tracking and Unity experiments with altered visual feedback. | `Unity` `C#` `MediaPipe` |
 
@@ -71,6 +38,6 @@ experiments/
 `-- neetcode            algorithm practice
 ```
 
-[bytebattle](https://github.com/aryagith/bytebattle) · [ecommerce-chatbot](https://github.com/aryagith/ecommerce-chatbot) · [neetcode-submissions](https://github.com/aryagith/neetcode-submissions)
+[bytebattle](https://github.com/aryagith/bytebattle) Â· [ecommerce-chatbot](https://github.com/aryagith/ecommerce-chatbot) Â· [neetcode-submissions](https://github.com/aryagith/neetcode-submissions)
 
 <sub>Stats update daily. Language percentages use source bytes from public, original, active repositories.</sub>

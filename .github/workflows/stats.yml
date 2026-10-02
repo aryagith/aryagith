@@ -9,6 +9,7 @@ on:
     paths:
       - scripts/update_stats.py
       - assets/portrait.txt
+      - assets/portrait-colors.json
       - .github/workflows/stats.yml
 
 permissions:
@@ -34,10 +35,10 @@ jobs:
           python3 scripts/update_stats.py
       - name: Save refreshed stats
         run: |
-          if git diff --quiet -- README.md; then exit 0; fi
+          if git diff --quiet -- assets/profile.svg; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md
+          git add assets/profile.svg
           git commit -m 'Refresh public profile stats'
           git pull --rebase origin main
           git push
