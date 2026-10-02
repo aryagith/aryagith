@@ -1,18 +1,17 @@
-"""Refresh the profile's public stats. Stdlib only; run --check for a self-test."""
+"""Refresh the text profile's public stats. Stdlib only; run --check to test."""
 
 import json
 import os
 from collections import Counter
 from datetime import datetime, timezone
-from html import escape
 from pathlib import Path
 import sys
 from urllib.parse import quote
 from urllib.request import Request, urlopen
-import xml.etree.ElementTree as ET
 
 USER = "aryagith"
-OUTPUT = Path(__file__).resolve().parents[1] / "assets" / "stats.svg"
+ROOT = Path(__file__).resolve().parents[1]
+START, END = "<!-- PROFILE:START -->", "<!-- PROFILE:END -->"
 
 
 def api(path):
@@ -23,50 +22,55 @@ def api(path):
         return json.load(response)
 
 
-def render(repos, languages, prs, date):
-    total = sum(languages.values())
-    parts = [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">',
-        '<title id="title">Public GitHub stats</title>',
-        '<desc id="desc">Public repository and pull request counts, stars, and languages by source bytes. Forks and archived repositories are excluded from language totals.</desc>',
-        '<rect width="960" height="300" rx="12" fill="#08090a"/>',
-        '<g font-family="Consolas,monospace" xml:space="preserve">',
-    ]
-
-    def text(x, y, value, size=12, color="#e7e7e0"):
-        parts.append(f'<text x="{x}" y="{y}" font-size="{size}" fill="{color}">{escape(str(value))}</text>')
-
-    text(32, 32, "GITHUB STATS", color="#a4b8ff")
-    text(730, 32, f"UPDATED / {date}", color="#a5a8a0")
-    parts.append('<path d="M32 52H928 M32 154H928" stroke="#3a3d39"/>')
+def render(repos, languages, prs, date, portrait):
     original = [repo for repo in repos if not repo["fork"] and not repo["archived"]]
-    metrics = [(len(repos), "PUBLIC REPOS"), (len(original), "ORIGINAL / ACTIVE"), (prs, "PUBLIC PULL REQUESTS"), (sum(repo["stargazers_count"] for repo in repos if not repo["fork"]), "STARS EARNED")]
-    for index, (value, label) in enumerate(metrics):
-        x = 32 + index * 232
-        text(x, 108, f"{value:02d}", 38)
-        text(x, 134, label, 11, "#a5a8a0")
-    text(32, 181, "LANGUAGES / SOURCE BYTES", 11, "#a4b8ff")
-    for index, (name, count) in enumerate(languages.most_common(6)):
-        x, y = 32 + (index % 3) * 306, 211 + (index // 3) * 32
-        percent = count / total * 100 if total else 0
-        # ponytail: six-language summary; expand the card if more detail is useful.
-        bar = "#" * max(1, round(percent / 10)) + "." * (10 - max(1, round(percent / 10)))
-        text(x, y, f"{name[:15]:15} [{bar}] {percent:4.1f}%", 11)
-    if not languages:
-        text(32, 211, "No public source-language data yet.", color="#a5a8a0")
-    text(32, 281, "PUBLIC DATA ONLY / FORKS + ARCHIVES EXCLUDED FROM LANGUAGE TOTALS", 9, "#a5a8a0")
-    parts.extend(["</g>", "</svg>"])
-    return "\n".join(parts) + "\n"
+    stars = sum(repo["stargazers_count"] for repo in repos if not repo["fork"])
+    info = [
+        "arya gosavi", "aryagith@github", "------------------------------------------", "",
+        "School ....... York University", "Location ..... Toronto, CA",
+        "Focus ........ AI / full-stack / systems", "",
+        "Languages .... Python, CUDA, C#",
+        "               TypeScript, JavaScript", "",
+        "-- GitHub --------------------------------", "",
+        f"Public repos . {len(repos)}", f"Original ..... {len(original)} active repositories",
+        f"Pull requests  {prs} public", f"Stars ........ {stars}", "",
+        "-- Source bytes --------------------------",
+    ]
+    total = sum(languages.values())
+    info.extend(f"{name[:24]:24} {count / total:>6.1%}" for name, count in languages.most_common(6) if total)
+    if not total:
+        info.append("No language data yet.")
+    info.extend(["", f"Updated ...... {date}"])
+    width = max(map(len, portrait), default=0)
+    rows = [f"{portrait[i] if i < len(portrait) else '':<{width}}    {info[i] if i < len(info) else ''}".rstrip() for i in range(max(len(portrait), len(info)))]
+    return "```text\n" + "\n".join(rows) + "\n```"
+
+
+def replace_profile(readme, profile):
+    if readme.count(START) != 1 or readme.count(END) != 1 or readme.index(START) > readme.index(END):
+        raise ValueError("Expected one ordered pair of profile markers; leaving README unchanged.")
+    before, rest = readme.split(START)
+    _, after = rest.split(END)
+    return before + START + "\n" + profile + "\n" + END + after
 
 
 def check():
     repos = [{"fork": False, "archived": False, "stargazers_count": 3}, {"fork": True, "archived": False, "stargazers_count": 9}]
-    svg = render(repos, Counter({"Python": 3, "C++": 1}), 7, "2026-10-02")
-    ET.fromstring(svg)
-    assert "75.0%" in svg and "25.0%" in svg and ">03</text>" in svg and ">01</text>" in svg
-    assert "A&amp;B" in render([], Counter({"A&B": 1}), 0, "test")
-    assert "No public source-language data" in render([], Counter(), 0, "test")
-    print("Stats self-check passed.")
+    profile = render(repos, Counter({"Python": 3, "C++": 1}), 7, "2026-10-02", [" .#", "@@ "])
+    assert "75.0%" in profile and "25.0%" in profile and "Stars ........ 3" in profile
+    assert "Public repos . 2" in profile and "Original ..... 1 active" in profile
+    readme = f"intro\n{START}\nold\n{END}\nprojects\n"
+    updated = replace_profile(readme, profile)
+    assert updated.startswith("intro\n") and updated.endswith("\nprojects\n") and "old" not in updated
+    assert replace_profile(updated, profile) == updated
+    assert "No language data yet" in render([], Counter(), 0, "test", [])
+    try:
+        replace_profile("missing markers", profile)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Missing markers must fail before writing.")
+    print("Text profile self-check passed.")
 
 
 def main():
@@ -84,14 +88,15 @@ def main():
             languages.update(api(f"repos/{USER}/{quote(repo['name'], safe='')}/languages"))
     prs = api(f"search/issues?q={quote(f'author:{USER} type:pr is:public')}")
     if prs.get("incomplete_results"):
-        raise RuntimeError("GitHub returned incomplete pull request totals; keeping the previous stats.")
-    svg = render(repos, languages, prs["total_count"], datetime.now(timezone.utc).date().isoformat())
-    ET.fromstring(svg)
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    temporary = OUTPUT.with_suffix(".tmp")
-    temporary.write_text(svg, encoding="utf-8")
-    temporary.replace(OUTPUT)
-    print(f"Updated {OUTPUT.name} from {len(repos)} public repositories.")
+        raise RuntimeError("Incomplete pull request totals; keeping the previous stats.")
+    portrait = (ROOT / "assets/portrait.txt").read_text(encoding="utf-8").splitlines()
+    profile = render(repos, languages, prs["total_count"], datetime.now(timezone.utc).date().isoformat(), portrait)
+    output = ROOT / "README.md"
+    updated = replace_profile(output.read_text(encoding="utf-8"), profile)
+    temporary = output.with_suffix(".tmp")
+    temporary.write_text(updated, encoding="utf-8")
+    temporary.replace(output)
+    print(f"Updated README from {len(repos)} public repositories.")
 
 
 if __name__ == "__main__":

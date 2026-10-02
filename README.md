@@ -1,12 +1,36 @@
-[![Arya Gosavi — ASCII portrait and nameplate](assets/header.svg)](https://aryas-portfolio.vercel.app)
+<!-- PROFILE:START -->
+```text
+========+++++*****************########    arya gosavi
+======+++++*******************########    aryagith@github
+=====+++****+=*###**************######    ------------------------------------------
+===++++++=-:..:--=*#**********########
+=++++++-.  ......::-+*******##########    School ....... York University
++++++=-.   .:.. ....-+*******######%%%    Location ..... Toronto, CA
++++++=:    ..........=****#######%%%%%    Focus ........ AI / full-stack / systems
++++++=-......        -##########%#####
++****+-:--==-.   .   -####%%%%%%%%#%%%    Languages .... Python, CUDA, C#
+******=:=-:=+.-----.:+%%%%%%%%%%%%%%%%                   TypeScript, JavaScript
+******#++###*-=*#*+----=*%%%%#########
+***######%%#*--+*+=:.   :-#%%%%%%%%%%%    -- GitHub --------------------------------
+####%%%#=#%#*+=++=-.   :: -*##%%%##%%%
+##%%%%#. :##**++=:.   .-: :-===*#*+*##    Public repos . 16
+++*###=   :+*#+-..   .--..-------+*+*#    Original ..... 13 active repositories
+++*****.:--:-**=:..:---. :------:-=*+*    Pull requests  3 public
+--==+*- .:--::=*=-=--.  ::--:----:.+**    Stars ........ 0
+-====-..  ....::+=-::. :::::.-:-::.:=+
+-+***::.  .:: .-=:..-::.::::.:::::  :+    -- Source bytes --------------------------
+****+:..   :-. ...::--:  :::.:-::: :::    Python                    58.5%
+++**=-. .. :--. ...-+=-.==::.--::.:-:     C#                        14.2%
+**+*:::..:.-:.-. .:-*+-.#%-..--:::-:      TypeScript                 9.4%
+***+..::::::. .==::-*+-:=%%-.--::::       JavaScript                 7.5%
+=+**:..:::::..  -+=-=----+*=.:-::.        C                          2.9%
+****-:...::-.::. :++=----::::.--::        CSS                        2.0%
+**+*+--..:::::::. .-=--::::::-::--:
+**##*::..... --:-:..-===-:::::::=--.      Updated ...... 2026-10-02
+```
+<!-- PROFILE:END -->
 
-<p align="center">
-  <a href="https://aryas-portfolio.vercel.app"><code>[ portfolio ]</code></a> &nbsp; / &nbsp;
-  <a href="https://www.linkedin.com/in/arya-gosavi-42063421b/"><code>[ linkedin ]</code></a> &nbsp; / &nbsp;
-  <a href="https://github.com/aryagith?tab=repositories"><code>[ all repositories ]</code></a>
-</p>
-
-Software Engineering at York University. Based in Toronto.
+[portfolio](https://aryas-portfolio.vercel.app) · [linkedin](https://www.linkedin.com/in/arya-gosavi-42063421b/) · [repositories](https://github.com/aryagith?tab=repositories)
 
 ### `projects`
 
@@ -44,15 +68,4 @@ experiments/
 
 [bytebattle](https://github.com/aryagith/bytebattle) · [ecommerce-chatbot](https://github.com/aryagith/ecommerce-chatbot) · [neetcode-submissions](https://github.com/aryagith/neetcode-submissions)
 
-### `stats`
-
-[![Public GitHub stats and repository language breakdown](assets/stats.svg)](https://github.com/aryagith?tab=repositories)
-
-<sub>Updated daily from GitHub's API. Languages are measured by source bytes across public, original, active repositories.</sub>
-
-<details>
-<summary><code>[ view the raw ASCII portrait ]</code></summary>
-
-The portrait in the header is made of text characters sampled from my GitHub avatar. [Open the plain-text version](assets/portrait.txt).
-
-</details>
+<sub>Stats update daily. Language percentages use source bytes from public, original, active repositories.</sub>
